@@ -2,12 +2,11 @@
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
 import 'package:angular2/core.dart';
-import 'package:angular2_dart/pages/home.dart';
 
-@Component(selector: 'my-app',
-    templateUrl: 'app_component.html',
-    directives: const [HomePage])
-class AppComponent
+@Component(selector: 'my-home-page',
+    templateUrl: 'home.html',
+    directives: const [])
+class HomePage
 {
 
 }

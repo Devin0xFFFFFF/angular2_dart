@@ -1,0 +1,49 @@
+<div class="container">
+    <h1>Create New Account:</h1>
+
+    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+        <fieldset class="form-group">
+            <label>First Name:</label>
+            <input [(ngModel)]="account.firstname" class="form-control" ngControl="firstname" required #firstname="ngForm">
+            <div [hidden]="firstname.valid" class="alert alert-danger">
+                First name is required
+            </div>
+            <label>Last Name:</label>
+            <input [(ngModel)]="account.lastname" class="form-control" ngControl="lastname" required #lastname="ngForm">
+            <div [hidden]="lastname.valid" class="alert alert-danger">
+                Last name is required
+            </div>
+        </fieldset>
+        <fieldset class="form-group">
+            <label>Email:</label>
+            <input [(ngModel)]="account.email" class="form-control" ngControl="email" required #email="ngForm">
+        </fieldset>
+        <fieldset class="form-group">
+            <label>Password:</label>
+            <input [(ngModel)]="account.password" type="password" class="form-control" ngControl="password" required #password="ngForm">
+            <label>Confirm Password:</label>
+            <input type="password" class="form-control" ngControl="passwordConfirmation" required #passwordConfirmation="ngForm">
+        </fieldset>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+    {{account.toString()}}
+
+    <h3>Existing Accounts</h3>
+
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="#acc of accounts">
+            <td>{{acc.firstname}}</td>
+            <td>{{acc.lastname}}</td>
+            <td>{{acc.email}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

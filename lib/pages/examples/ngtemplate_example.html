@@ -1,0 +1,21 @@
+<div *ngIf="list != null">
+    <ul class="list-group">
+        <li *ngFor="#item of list; #i = index" class="list-group-item">
+            {{i}} =
+            <span [ngSwitch]="item.runtimeType.toString()">
+                <template ngSwitchWhen="String">
+                    <span>String: {{item}}</span>
+                </template>
+                <template ngSwitchWhen="bool">
+                    <span>Boolean: {{item}}</span>
+                </template>
+                <template ngSwitchWhen="int">
+                    <span>Integer: {{item}}</span>
+                </template>
+                <template ngSwitchDefault>
+                    <span>Other: {{item}}</span>
+                </template>
+            </span>
+        </li>
+    </ul>
+</div>

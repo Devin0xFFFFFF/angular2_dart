@@ -1,2 +1,5 @@
-<my-ngtemplate-example></my-ngtemplate-example>
-<my-nginput-example></my-nginput-example>
+<ul class="nav nav-pills">
+    <li [class.active]="router.isRouteActive(router.generate(['./TemplateExample']))"><a [routerLink]="['./TemplateExample']">Template Example</a></li>
+    <li [class.active]="router.isRouteActive(router.generate(['./InputExample']))"><a [routerLink]="['./InputExample']">Input Example</a></li>
+</ul>
+<router-outlet></router-outlet>

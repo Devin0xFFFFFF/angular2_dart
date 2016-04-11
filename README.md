@@ -70,5 +70,5 @@ This is the first place to check when a component you created just isn't loading
 Make sure your directives list has the required directive classes included.
     >directives: const [HomePage, ...]
 
-- [This Error](http://stackoverflow.com/questions/27217278/could-not-find-a-file-named-pubspec-yaml-in) can arise when the .pubcache become corrupted. Removing the cache (sudo rm -r /home/<username>/.pubcache) and running pub get should solve this.
+- [This Error](http://stackoverflow.com/questions/27217278/could-not-find-a-file-named-pubspec-yaml-in) can arise when the .pubcache becomes corrupted. Removing the cache (sudo rm -r /home/<username>/.pubcache) and running pub get should resolve this.
     >Could not find a file named"pubspec.yaml"in"/home/<username>/.pubcache/hosted/pub.dartlang.org/browser-0.10.0+2".

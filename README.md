@@ -54,6 +54,16 @@ in the project directory.
 
 > By default, tests are run in the Dart VM, but you can run them in the browser as well by passing pub run test -p chrome path/to/test.dart. test will take care of starting the browser and loading the tests, and all the results will be reported on the command line just like for VM tests. In fact, you can even run tests on both platforms with a single command: pub run test -p "chrome,vm" path/to/test.dart.
 
+Angular 2 with Dart Tests have their own package (https://pub.dartlang.org/packages/angular2_testing) which can test Angular components. An official example is in the angular repo under the test folder for Dart: https://github.com/angular/angular/tree/master/modules_dart/angular2_testing
+
+Otherwise, check out the examples in this project under test.
+
+Pubspec:
+
+    dev_dependencies:
+        test: '^0.12.6'
+        angular2_testing: any
+
 ####Troubleshooting:
 
 When developing Angular 2 in Dart,

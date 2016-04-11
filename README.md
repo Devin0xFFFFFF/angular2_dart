@@ -14,6 +14,7 @@ one and two way binding, as well as other uses for directives.
 - [Angular 2 with Dart Official Guide](https://angular.io/docs/dart/latest/guide/)
 - [Angular 2 with Dart Cheatsheet](https://angular.io/docs/dart/latest/cheatsheet.html)
 - [Angular 2 with Typescript Example Projects](http://builtwithangular2.com/)
+- [Angular 2 with Dart Example Projects](https://github.com/ng2-dart-samples)
 - [Dart Cheatsheet](http://dartlangfr.net/dart-cheat-sheet/)
 - [Dart Async Tutorial](https://www.dartlang.org/docs/tutorials/futures/)
 - [Pub Dependency Reference](https://www.dartlang.org/tools/pub/dependencies.html)

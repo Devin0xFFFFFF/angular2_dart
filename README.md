@@ -43,6 +43,10 @@ You can use whatever server you like, such as WebStorm's server or Python's Simp
 Another option is to build and serve the app using pub serve, and then run it by visiting http://localhost:8080 in any modern browser.
 Pub serve generates the JavaScript on the fly, which can take a while when you first visit the page.
 
+####Testing
+
+https://pub.dartlang.org/packages/test
+
 ####Troubleshooting:
 
 When developing Angular 2 in Dart,

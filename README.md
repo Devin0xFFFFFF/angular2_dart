@@ -18,6 +18,7 @@ one and two way binding, as well as other uses for directives.
 - [Dart Cheatsheet](http://dartlangfr.net/dart-cheat-sheet/)
 - [Dart Async Tutorial](https://www.dartlang.org/docs/tutorials/futures/)
 - [Pub Dependency Reference](https://www.dartlang.org/tools/pub/dependencies.html)
+- [Other Assorted Angular 2 References](https://www.npmjs.com/package/awesome-angular2)
 
 ####Dependencies:
 

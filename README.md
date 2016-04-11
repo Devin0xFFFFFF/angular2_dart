@@ -46,7 +46,13 @@ Pub serve generates the JavaScript on the fly, which can take a while when you f
 
 ####Testing
 
-https://pub.dartlang.org/packages/test
+The Dart test package (https://pub.dartlang.org/packages/test) can be used for unit testing Dart class functionality.
+Tests can be run by executing "pub run test <path_to_test>". Excluding the path will directly reference the test folder
+in the project directory.
+
+> The test runner considers any file that ends with _test.dart to be a test file. If you don't pass any paths, it will run all the test files in your test/ directory, making it easy to test your entire application at once.
+
+> By default, tests are run in the Dart VM, but you can run them in the browser as well by passing pub run test -p chrome path/to/test.dart. test will take care of starting the browser and loading the tests, and all the results will be reported on the command line just like for VM tests. In fact, you can even run tests on both platforms with a single command: pub run test -p "chrome,vm" path/to/test.dart.
 
 ####Troubleshooting:
 

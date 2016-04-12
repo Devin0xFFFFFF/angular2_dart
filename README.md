@@ -60,6 +60,8 @@ Tests can be debugged by passing the --pause-after-load flag to the test runner.
 
 Angular 2 with Dart Tests have their own package (https://pub.dartlang.org/packages/angular2_testing) which can test Angular components. An official example is in the angular repo under the test folder for Dart: https://github.com/angular/angular/tree/master/modules_dart/angular2_testing
 
+A [Typescript Reference Video](https://www.youtube.com/watch?v=C0F2E-PRm44) can give you a better idea of how to test the Angular way.
+
 Otherwise, check out the examples in this project under test.
 
 Pubspec:

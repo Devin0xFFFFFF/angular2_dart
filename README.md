@@ -14,8 +14,11 @@ one and two way binding, as well as other uses for directives.
 - [Angular 2 with Dart Official Guide](https://angular.io/docs/dart/latest/guide/)
 - [Angular 2 with Dart Cheatsheet](https://angular.io/docs/dart/latest/cheatsheet.html)
 - [Angular 2 with Typescript Example Projects](http://builtwithangular2.com/)
+- [Angular 2 with Dart Example Projects](https://github.com/ng2-dart-samples)
 - [Dart Cheatsheet](http://dartlangfr.net/dart-cheat-sheet/)
 - [Dart Async Tutorial](https://www.dartlang.org/docs/tutorials/futures/)
+- [Pub Dependency Reference](https://www.dartlang.org/tools/pub/dependencies.html)
+- [Other Assorted Angular 2 References](https://www.npmjs.com/package/awesome-angular2)
 
 ####Dependencies:
 
@@ -42,6 +45,30 @@ You can use whatever server you like, such as WebStorm's server or Python's Simp
 
 Another option is to build and serve the app using pub serve, and then run it by visiting http://localhost:8080 in any modern browser.
 Pub serve generates the JavaScript on the fly, which can take a while when you first visit the page.
+
+####Testing
+
+The Dart test package (https://pub.dartlang.org/packages/test) can be used for unit testing Dart class functionality.
+Tests can be run by executing "pub run test <path_to_test>". Excluding the path will directly reference the test folder
+in the project directory.
+
+Tests can be debugged by passing the --pause-after-load flag to the test runner. 
+
+> The test runner considers any file that ends with _test.dart to be a test file. If you don't pass any paths, it will run all the test files in your test/ directory, making it easy to test your entire application at once.
+
+> By default, tests are run in the Dart VM, but you can run them in the browser as well by passing pub run test -p chrome path/to/test.dart. test will take care of starting the browser and loading the tests, and all the results will be reported on the command line just like for VM tests. In fact, you can even run tests on both platforms with a single command: pub run test -p "chrome,vm" path/to/test.dart.
+
+Angular 2 with Dart Tests have their own package (https://pub.dartlang.org/packages/angular2_testing) which can test Angular components. An official example is in the angular repo under the test folder for Dart: https://github.com/angular/angular/tree/master/modules_dart/angular2_testing
+
+A [Typescript Reference Video](https://www.youtube.com/watch?v=C0F2E-PRm44) can give you a better idea of how to test the Angular way.
+
+Otherwise, check out the examples in this project under test.
+
+Pubspec:
+
+    dev_dependencies:
+        test: '^0.12.6'
+        angular2_testing: any
 
 ####Troubleshooting:
 
@@ -70,3 +97,5 @@ This is the first place to check when a component you created just isn't loading
 Make sure your directives list has the required directive classes included.
     >directives: const [HomePage, ...]
 
+- [This Error](http://stackoverflow.com/questions/27217278/could-not-find-a-file-named-pubspec-yaml-in) can arise when the .pubcache becomes corrupted. Removing the cache (sudo rm -r /home/<username>/.pubcache) and running pub get should resolve this.
+    >Could not find a file named"pubspec.yaml"in"/home/<username>/.pubcache/hosted/pub.dartlang.org/browser-0.10.0+2".

@@ -7,4 +7,7 @@ RUN pub get
 ADD . /app
 RUN pub get --offline
 
-ENTRYPOINT ["/usr/lib/dart/bin/pub", "serve", "web", "--port=8080"]
+EXPOSE 8080
+
+CMD pub serve web --hostname=0.0.0.0 #--mode=debug
+#ENTRYPOINT ["/usr/lib/dart/bin/pub", "serve", "web", "--port=8080"]

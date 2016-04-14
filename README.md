@@ -72,13 +72,33 @@ Pubspec:
 
 ####Docker:
 
-The Dockerfile exposes port 8080 and runs pub serve on port 8080
+There are several files associated with Docker in this project:
+
+#####Dockerfile-Servable
+
+Exposes port 8080 and runs pub serve on port 8080
 
 Build the Image with: 'docker build -t dart_img .'
 
 Run a container with:'docker run -d -p 8080:8080 dart_img'
 
 View the running intance by going to: '0.0.0.0:8080'
+
+#####Dockerfile
+
+Builds the app and copies the contents to a file that will be mounted to an nginx container
+
+#####Docker-Compose
+
+Launches an nginx container to serve the Dart Angular 2 App
+
+Run the follwoing commands from the project directory:
+
+Build: 'docker-compose build'
+
+Run: 'docker-compose up -d'
+
+Kill: 'docker-compose kill'
 
 ####Troubleshooting:
 

@@ -1,0 +1,15 @@
+version: '2'
+services:
+  nginx:
+    ports:
+        - "80:80"
+    build: ./nginx
+    links:
+        - dartboard:dartboard
+    volumes_from:
+        - dartboard
+  dartboard:
+      build: .
+      entrypoint: "true"
+      volumes:
+          - /usr/share/nginx/angular2

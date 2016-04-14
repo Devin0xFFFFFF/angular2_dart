@@ -70,6 +70,14 @@ Pubspec:
         test: '^0.12.6'
         angular2_testing: any
 
+####Docker:
+
+The Dockerfile exposes port 8080 and runs pub serve on port 8080
+
+Build the Image with: docker build -t dart_img .
+
+Run a container with: docker run -d -p 8080:8080 dart_img
+
 ####Troubleshooting:
 
 When developing Angular 2 in Dart,

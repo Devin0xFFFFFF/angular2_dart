@@ -74,9 +74,11 @@ Pubspec:
 
 The Dockerfile exposes port 8080 and runs pub serve on port 8080
 
-Build the Image with: docker build -t dart_img .
+Build the Image with: 'docker build -t dart_img .'
 
-Run a container with: docker run -d -p 8080:8080 dart_img
+Run a container with:'docker run -d -p 8080:8080 dart_img'
+
+View the running intance by going to: '0.0.0.0:8080'
 
 ####Troubleshooting:
 

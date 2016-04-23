@@ -5,10 +5,10 @@ services:
         - "80:80"
     build: ./nginx
     links:
-        - dartboard:dartboard
+        - dartapp:dartapp
     volumes_from:
-        - dartboard
-  dartboard:
+        - dartapp
+  dartapp:
       build: .
       entrypoint: "true"
       volumes:
